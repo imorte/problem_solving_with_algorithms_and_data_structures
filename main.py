@@ -3,6 +3,9 @@ class Fraction:
         self.num = top
         self.den = bottom
 
+    def __str__(self):
+        return str(self.num) + '/' + str(self.den)
+
 
 myf = Fraction(3, 5)
 
