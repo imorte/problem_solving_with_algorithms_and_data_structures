@@ -6,7 +6,14 @@ class Fraction:
     def __str__(self):
         return str(self.num) + '/' + str(self.den)
 
+    def __add__(self, otherfraction):
+        newnum = self.num * otherfraction.den + self.den * otherfraction.num
+        newdem = self.den * otherfraction.den
+        return Fraction(newnum, newdem)
 
-myf = Fraction(3, 5)
 
-print(myf)
+f1 = Fraction(1, 4)
+f2 = Fraction(1, 2)
+
+
+print(f1 + f2)
